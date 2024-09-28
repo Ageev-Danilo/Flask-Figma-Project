@@ -1,2 +1,2 @@
-from .app import user_qapp
+from .app import user_app
 from views import show_user_app
