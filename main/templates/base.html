@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <a href="/">Home page</a>
+        <a href="/tour/">Tour</a>
+
+        {% if username is defined %}
+            <p>Вітаємо, {{ username }}</p>
+            <form method = "post">
+                <button name = "logout_user" value = "a">Logout</button>
+            </form>
+        {% else %}
+            <a href="/login/">Login</a>
+            <a href="/registration/">Registration</a>
+        {% endif %}
+
+        {% block content %} {% endblock %}
+    </body>
+</html>
