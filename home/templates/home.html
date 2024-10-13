@@ -6,4 +6,12 @@ Home page
 
 {% block content %} 
 <p>Home page</p>
+
+<form method="post">
+    <p>Залишити відгук</p>
+    <label>Ваше ім'я<input type="text" name = "client_name"></label>
+    <label><textarea name="client_review" id="">Ваш Відгук</textarea></label>
+    <label>Ваш e-mail<input type="text" name = "client_email" ></label>
+    <button type = "submit">Надіслати відгук</button>
+</form>
 {% endblock %}
