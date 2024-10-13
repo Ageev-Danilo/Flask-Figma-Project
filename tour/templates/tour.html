@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} TOUR PAGE {% endblock %}
+
+{% block content %}
+   
+    {% for tour in tours %}
+    <div class = "tour" id = "tour-{{ tour.id }}">
+
+        <hr>
+        <h2><a href="/tour_one/tour_id={{ tour.id }}">{{ tour.title }}</a></h2>
+        <p>{{ tour.date }}</p>
+        <p>{{ tour.country }}</p>
+        <hr>
+
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} VIEW TOUR PAGE {% endblock %}
+
+{% block content %}
+   
+    
+    <div class = "tour" id = "tour-{{ tour.id }}">
+        <hr>
+        
+        <h2>{{ tour.title }}</h2>
+        <p>{{ tour.date }}</p>
+        <p>{{ tour.country }}</p>
+        <p>{{ tour.price }}</p>
+        <p>{{ tour.description }}</p>
+        <hr>
+
+    </div>
+
+
+{% endblock %}
