@@ -26,7 +26,8 @@ def render_view_tour_page(tour_id):
             if "logout_user" in flask.request.form:
                 logout_user()
         else:
-            return flask.render_template(template_name_or_list = "tour.html", username = username, tour = tour)
+            print("where")
+            return flask.render_template(template_name_or_list = "view_tour.html", username = username, tour = tour)
     except:
         pass
     return flask.render_template(template_name_or_list = "view_tour.html", tour = tour)

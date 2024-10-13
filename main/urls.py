@@ -12,9 +12,9 @@ tour.tour.add_url_rule(
 
 tour.tour.add_url_rule(
     rule = "/tour_one/<tour_id>",
-    view_func = tour.render_view_tour_page 
+    view_func = tour.render_view_tour_page,
+    methods = ["GET", "POST"]
 )
-
 
 user.user_app.add_url_rule(
     rule = "/user/", 
