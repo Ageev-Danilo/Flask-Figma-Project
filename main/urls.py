@@ -16,11 +16,11 @@ tour.tour.add_url_rule(
     methods = ["GET", "POST"]
 )
 
-user.user_app.add_url_rule(
-    rule = "/user/", 
-    view_func = user.show_user_app,
-    methods = ["GET", "POST"]
-)
+# user.user_app.add_url_rule(
+#     rule = "/user/", 
+#     view_func = user.show_user_app,
+#     methods = ["GET", "POST"]
+# )
 
 home.home.add_url_rule(
     rule = "/", 
@@ -29,13 +29,13 @@ home.home.add_url_rule(
 )
 
 user.user_app.add_url_rule(
-    rule = "/login/", 
+    rule = "/user/login/", 
     view_func = user.show_login_page,
     methods = ["GET", "POST"]
 )
 
 user.user_app.add_url_rule(
-    rule = "/registration/", 
+    rule = "/user/registration/", 
     view_func = user.show_reg_page,
     methods = ["GET", "POST"]
 )

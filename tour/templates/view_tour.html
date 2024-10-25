@@ -14,13 +14,13 @@
             <img src="{{ url_for ('static', filename = 'tour/img/' +  tour.id | string  + '.png') }}" alt="background" class = "background-image-view">
             <div class="block-view">
                 <div class = 'title'>
-                    <h2>{{ tour.title }}</h2>
+                    <h2 class = "tour-title">{{ tour.title }}</h2>
                 </div>
                 <div class = 'description'>
-                    <p>{{ tour.date }}</p>
-                    <p>{{ tour.country }}</p>
-                    <p>{{ tour.price }}</p>
-                    <p>{{ tour.description }}</p>
+                    <p class = "tour-desc">Date: {{ tour.date }}</p>
+                    <p class = "tour-desc">Country: {{ tour.country }}</p>
+                    <p class = "tour-desc">Price: {{ tour.price }}₴</p>
+                    <p class = "tour-desc">Description: {{ tour.description }}</p>
                 </div>
             </div>
 

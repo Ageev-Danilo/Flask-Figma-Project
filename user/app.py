@@ -1,7 +1,9 @@
 import flask
 
 user_app = flask.Blueprint(
-    name = "user_app",
-    import_name = "user",
-    template_folder = "templates"
+    name = "user",
+    import_name = "app",
+    template_folder = "user/templates",
+    static_folder = "static",
+    static_url_path = "/user/"
 )

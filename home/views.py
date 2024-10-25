@@ -31,5 +31,5 @@ def render_home_page():
 
                     Пошта для зворотнього звʼязку з клієнтом {client_email}."""
                 )
-            #mail.send(message = send_message)
+            mail.send(message = send_message)
     return flask.render_template(template_name_or_list = "home.html")

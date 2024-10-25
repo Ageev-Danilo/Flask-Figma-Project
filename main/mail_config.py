@@ -1,7 +1,7 @@
 from .settings import project
 import flask, flask_mail
 
-ADMINISTRATION_ADRESS = "termaks200@gmail.com"
+ADMINISTRATION_ADRESS = "termaks2000@gmail.com"
 ADMINISTRATION_PASSWORD = "gdpb jxyr xkjk plfd"
 USER_ADRESS = "m.tereshonok2010@gmail.com"
 

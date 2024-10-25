@@ -21,7 +21,7 @@ def show_login_page():
             if user.username == username and user.password == password:
                 flask_login.login_user(user = user)
                 return flask.redirect("/")
-        return flask.render_template(template_name_or_list = "login.html", add_text = "Username or password is incorrect!")
+        return flask.render_template(template_name_or_list = "login.html", incorrect = True)
     return flask.render_template(template_name_or_list = "login.html")
 
 def show_reg_page():
@@ -32,7 +32,8 @@ def show_reg_page():
         user = User(username = username, password = password)
         data_base.session.add(user)
         data_base.session.commit()
-        return flask.redirect("/login/")
+        return flask.render_template(template_name_or_list = "registration.html", send = True)
+    
 
 
     return flask.render_template(template_name_or_list = "registration.html")

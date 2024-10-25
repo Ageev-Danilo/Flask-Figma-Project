@@ -1,18 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %} Login page {% endblock %}
+{% block title %} Registration Page {% endblock %}
 
-{% block content %} 
+{% block links %} 
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'user/css/login.css') }}">
+{% endblock %}
 
-    <h1>Login page</h1> <p></p>
-    <form method = "post">
+{% block content %}
 
-        <input type="text" name="username" placeholder="Username"><br> <br>
-        <input type="password" name="password" placeholder="Password"><br><br>
-        <button>Login</button>
-        {% if add_text is defined %}
-            <p class = "additional-text" style = "color: red;">{{ add_text }}</p>
+    <img src="{{ url_for('static', filename = 'user/images/bg.png') }}" class = "bg-image">
+
+    <form method = "post" class = "login-form">
+        <h1 class = "head-title">Login</h1>
+        <div class = "input-block">
+            <p class = "input-desc">Enter your username</p>
+            <input type="text" name="username"  class = "login-input" placeholder = "Enter your username..." required><br><br>
+        </div>
+        <div class = "input-block">
+            <p class = "input-desc">Enter your password</p>
+            <input type="password" name="password" class = "login-input" placeholder = "Enter your password..." required><br><br>
+        </div>
+        {% if incorrect is defined %}
+            <a href="/user/registration/" class = "incorrect-text">Your username or password is incorrect, be sure that you have an account</a>
         {% endif %}
+        <button class = "login-button">Login</button>
 
     </form>
 

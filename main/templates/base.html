@@ -29,13 +29,14 @@
                 
                 {% else %}
                     <div class = 'login-links'>
-                        <a href="/login/" id="login">Login</a>
-                        <a href="/registration/"id = 'registration'>Registration</a>
+                        <a href="/user/login/" id="login">Login</a>
+                        <a href="/user/registration/"id = 'registration'>Registration</a>
                     </div>
                 {% endif %}
             
         </header>
-        
-        {% block content %} {% endblock %}
+        <main>
+            {% block content %} {% endblock %}
+        </main>
     </body>
 </html>

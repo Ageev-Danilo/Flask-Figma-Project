@@ -14,9 +14,9 @@
             <img src="{{ url_for('static', filename = 'tour/img/' +  tour.id | string  + '.png') }}" alt="" class = 'img-tour'>
             <div class = 'block'>
                 
-                <h2><a href="/tour_one/tour_id={{ tour.id }}" class="link">{{ tour.title }}</a></h2>
-                <p>{{ tour.date }}</p>
-                <p>{{ tour.country }}</p>
+                <a href="/tour_one/tour_id={{ tour.id }}" class="link">{{ tour.title }}</a>
+                <p class = "tour-desc">Date: {{ tour.date }}</p>
+                <p class = "tour-desc">Country: {{ tour.country }}</p>
             </div>
 
         </div>
