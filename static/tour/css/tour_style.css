@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --size: 0.8;
+}
+.tours{
+    display: grid;
+    grid-gap: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    width: 100%;
+    height: 963px;
+    grid-template-rows: 430px;
+}
+
+.tour{
+   
+    display: block;
+    border-radius: calc(100px * var(--size));
+    border: #2C2A4A solid calc(4px * var(--size));
+    width: calc(1480px * var(--size));
+    height: calc(458px * var(--size));
+    z-index: 2;
+    color: white;
+    position: relative;
+    font-size: calc(40px * var(--size));
+    overflow: hidden;
+   
+}
+.background-image-tour{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.link{
+    padding-left: 0px;
+    font-size: calc(64px * var(--size));
+    font-weight: 800;
+}
+.block{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: calc(556px * var(--size));
+    height: 100%;
+    padding-left: 20px;
+}
+#tour{
+    font-weight: 700;
+}

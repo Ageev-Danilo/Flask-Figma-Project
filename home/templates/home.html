@@ -4,14 +4,37 @@
 Home page
 {% endblock %}
 
-{% block content %} 
-<p>Home page</p>
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'home/css/style.css') }}">
+{% endblock %}
 
-<form method="post">
-    <p>Залишити відгук</p>
-    <label>Ваше ім'я<input type="text" name = "client_name"></label>
-    <label><textarea name="client_review" id="">Ваш Відгук</textarea></label>
-    <label>Ваш e-mail<input type="text" name = "client_email" ></label>
-    <button type = "submit">Надіслати відгук</button>
-</form>
+{% block content %} 
+<div class = 'background-image'>
+    <img src="static/home/img/praktikimg.jpg" alt="background">
+</div>
+<div class = 'all-form'>
+    <form method="post" class = 'feedback-form'>
+        <div class = 'leave-feedback-text'>
+            <p>Leave Feedback</p>
+        </div>
+        <div class = 'feedback-form1'>
+            <div class = 'enter-name'>
+                <p>Enter your name:</p>
+                <label><input type="text" name = "client_name"></label>
+            </div>
+            <div class = 'enter-email'>
+                <p>Enter your email:</p>
+                <label><input type="text" name = "client_email" ></label>
+            </div>
+            <div class = 'enter-feedback'>
+            <p>Enter your feedback:</p>
+            <label><textarea name="client_review" id=""></textarea></label>
+            </div>
+        </div>
+            
+                <button type = "submit" class = 'send-button'>Send Feedback</button>
+            
+        
+    </form>
+</div>
 {% endblock %}

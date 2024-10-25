@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+a{
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+header{
+    background: linear-gradient(to right,#2C2A4A, #35365D);
+    width: 100%;
+    height: 119px;
+  
+}
+body{
+    
+    color: white;
+    font-family: Inter;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-links{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 400;
+
+}
+.always-links{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-top: 30px;
+   
+}
+
+
+.logout-user-form{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    min-height: 119px;
+    max-height: 119px;
+    flex-direction: row;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    
+}
+.logout-button{
+    
+    border-width: 0px;
+    margin-left: 40px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 40px;
+    padding: 22px;
+    background: #3D3F6C;
+}
+.username-text{
+    font-weight: 400;
+    font-size: 40px;
+}

@@ -2,9 +2,10 @@ import flask
 import os
 import flask_sqlalchemy, flask_migrate
 project = flask.Flask(
-    import_name = "main",
-    template_folder = "templates",
-    instance_path = os.path.abspath(__file__ + "/../../instance")
+    import_name = "settings",
+    template_folder = "main/templates",
+    instance_path = os.path.abspath(__file__ + "/../../instance"),
+    static_folder = "static"
 )
 
 project.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"

@@ -4,21 +4,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
+        {% block links %}{% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'main/css/base_style.css') }}">
+
     </head>
+    
     <body>
-        <a href="/">Home page</a>
-        <a href="/tour/">Tour</a>
-
-        {% if username is defined %}
-            <p>Вітаємо, {{ username }}</p>
-            <form method = "post">
-                <button name = "logout_user" value = "a">Logout</button>
-            </form>
-        {% else %}
-            <a href="/login/">Login</a>
-            <a href="/registration/">Registration</a>
-        {% endif %}
-
+        <header>
+            
+                <div class = "always-links">
+                    
+                        <a href="/" id = 'home'>Home page</a>
+                        <a href="/tour/" id = 'tour'>Tour</a>
+                </div>
+                
+                {% if username is defined %}
+                    <div class = 'logout-user-form'>
+                        <p class = 'username-text'>Вітаємо, {{ username }}</p>
+                        <form method = "post" class="logout-form">
+                            <button name = "logout_user" value = "a" class="logout-button">Logout</button>
+                        </form>
+                    </div>
+                        
+                
+                {% else %}
+                    <div class = 'login-links'>
+                        <a href="/login/" id="login">Login</a>
+                        <a href="/registration/"id = 'registration'>Registration</a>
+                    </div>
+                {% endif %}
+            
+        </header>
+        
         {% block content %} {% endblock %}
     </body>
 </html>

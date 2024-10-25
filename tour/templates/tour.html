@@ -2,19 +2,26 @@
 
 {% block title %} TOUR PAGE {% endblock %}
 
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'tour/css/tour_style.css') }}">
+{% endblock %}
+
 {% block content %}
-   
-    {% for tour in tours %}
-    <div class = "tour" id = "tour-{{ tour.id }}">
+    <img src="/../static/tour/img/back.jpg" alt="background" class = "background-image-tour">
+    <div class = 'tours'>
+        {% for tour in tours %}
+        <div class = "tour" id = "tour-{{ tour.id }}">
+            <img src="{{ url_for('static', filename = 'tour/img/' +  tour.id | string  + '.png') }}" alt="" class = 'img-tour'>
+            <div class = 'block'>
+                
+                <h2><a href="/tour_one/tour_id={{ tour.id }}" class="link">{{ tour.title }}</a></h2>
+                <p>{{ tour.date }}</p>
+                <p>{{ tour.country }}</p>
+            </div>
 
-        <hr>
-        <h2><a href="/tour_one/tour_id={{ tour.id }}">{{ tour.title }}</a></h2>
-        <p>{{ tour.date }}</p>
-        <p>{{ tour.country }}</p>
-        <hr>
-
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 {% endblock %}
 
 
