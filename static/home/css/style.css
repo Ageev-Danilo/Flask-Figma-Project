@@ -1,23 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 :root{
-    --size: 0.9;
+    --size: 1;
 }
 
-img{
+.name-of-site{
+    min-width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    
+}
+
+.background-image{
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 .feedback-form{
-    margin: auto;
-   
+    display: flex;
+    justify-content: center;
+    top: 119px;
+    right: 0px;
+    position: fixed;
     background: linear-gradient(#705DAD, #5C4C92);
     border: #25233E solid 5px;
     border-radius: 40px;
-    width: calc(664px * var(--size));
-    height: calc(852px * var(--size));
-   
+    width: 375px;
+    height: 412px ;
+    align-items: center;
     overflow: hidden;
+    flex-direction: column;
    
 
 }
@@ -33,61 +49,71 @@ input{
     background: #3D3F6C;
     border: #343559 solid 4px;
     border-radius: calc(20px * var(--size));
-    width: calc(512px * var(--size));
-    height: calc(65px * var(--size));
+    min-width: 290px;
+    min-height: 30px;
+    max-width: 290px;
+    max-height: 30px;
 }
 textarea{
     background: #3D3F6C;
     border: #343559 solid 4px;
     border-radius: calc(20px * var(--size));
-    width: calc(512px * var(--size));
-    height: calc(130px * var(--size));
+    min-width: 290px;
+    min-height: 70px;
+    max-width: 290px;
+    max-height: 70px;
 }
 
 .leave-feedback-text{
     text-align: center;
     color: white;
-    font-size: calc(40px * var(--size));
+    font-size: 20px;
     font-weight: 400;
     font-family: inter;
+    margin-top: 20px;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
 }
 
 .send-button{
     left: 42%;
-    position: absolute;
+    
     text-align: center;
     background: #7A67B6;
     border: #35365D solid 4px;
     border-radius: calc(20px * var(--size));
-    width: calc(344px * var(--size));
-    height: calc(78px * var(--size));
+    width: 226px;
+    height: 59px;
     color: white;
-    font-size: calc(40px * var(--size));
+    font-size: 24px;
+   margin-bottom: 10px ;
     
 }
 .feedback-form1{
+   
     width: 80%;
     margin: auto;
-    padding-bottom: calc(30px * var(--size));
+    padding-bottom: calc(0px * var(--size));
     color: white;
     font-size: calc(40px * var(--size));
     font-weight: 400;
     font-family: Inter;
 }
 .enter-name{
-    max-width: calc(512px * var(--size));
-    max-height: calc(123px * var(--size));
-    padding-bottom: calc(40px * var(--size));
+    padding-top: 10px;
+    padding-bottom: calc(0px * var(--size));
+    font-size: 20px;
 }
 .enter-email{
-    max-width: calc(512px * var(--size));
-    max-height: calc(123px * var(--size));
-    padding-bottom: calc(40px * var(--size));
+    padding-top: 10px;
+    padding-bottom: calc(0px * var(--size));
+    font-size: 20px;
 }
 .enter-feedback{
-    max-width: calc(512px * var(--size));
-    max-height: calc(188px * var(--size));
-    padding-bottom: calc(20px * var(--size));
+    padding-top: 10px;
+    padding-bottom: calc(0px * var(--size));
+    font-size: 20px;
 }
 
 .all-form{
@@ -97,4 +123,14 @@ textarea{
 }
 #home{
     font-weight: 700;
+}
+
+.benefit{
+    font-weight: 400;
+    font-size: 40px;
+    max-width: 398px;
+    
+}
+p{
+    margin: 2px;
 }
