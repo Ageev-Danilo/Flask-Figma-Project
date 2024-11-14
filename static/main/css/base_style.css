@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+main{
+    height: calc(100% - 119px);
+    /* justify-content: center;
+    min-height: calc(100hv - 119px);
+    max-height: calc(100hv - 119px); */
+    align-items: center; 
+    display: flex;
+}
 
 :root{
     --size: 0.9;
@@ -15,7 +23,6 @@ header{
     background: linear-gradient(to right,#2C2A4A, #35365D);
     width: 100%;
     height: 119px;
-  
 }
 body{
     

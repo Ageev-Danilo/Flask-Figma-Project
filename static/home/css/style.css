@@ -136,3 +136,12 @@ textarea:focus{
 #home{
     font-weight: 700;
 }
+
+.success-text{
+    color: #1eff00;
+    font-size: 40px;
+    font-weight: 300;
+    word-break: normal;
+    max-width: 600px;
+    margin: -10px 0px;
+}

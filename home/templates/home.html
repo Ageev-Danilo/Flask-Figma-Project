@@ -33,7 +33,9 @@ Home page
         </div>
             
                 <button type = "submit" class = 'send-button'>Send Feedback</button>
-            
+        {% if correct %}
+        <p class = "success-text">The feedback has been sent. </p>
+        {% endif %}  
         
     </form>
 </div>

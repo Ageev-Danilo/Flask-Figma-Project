@@ -18,6 +18,7 @@ def render_home_page():
             return flask.render_template(template_name_or_list = "home.html", username = username)
     except:
         pass
+    correct = False
     if flask.request.method == "POST":
         if "logout_user" not in flask.request.form:
             client_name = flask.request.form["client_name"]
@@ -32,4 +33,5 @@ def render_home_page():
                     Пошта для зворотнього звʼязку з клієнтом {client_email}."""
                 )
             mail.send(message = send_message)
-    return flask.render_template(template_name_or_list = "home.html")
+            correct = True
+    return flask.render_template(template_name_or_list = "home.html", correct = correct)
