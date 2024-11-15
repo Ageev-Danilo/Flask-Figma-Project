@@ -29,6 +29,11 @@
     overflow: hidden;
    
 }
+
+.img-tour{
+    width: 100%;
+}
+
 .background-image-tour{
     position: fixed;
     width: 100%;

@@ -9,34 +9,52 @@ Home page
 {% endblock %}
 
 {% block content %} 
-<div class = 'background-image'>
-    <img src="static/home/img/praktikimg.jpg" alt="background">
-</div>
-<div class = 'all-form'>
-    <form method="post" class = 'feedback-form'>
-        <div class = 'leave-feedback-text'>
-            <p>Leave Feedback</p>
-        </div>
-        <div class = 'feedback-form1'>
-            <div class = 'enter-name'>
-                <p class = "input-desc">Enter your name:</p>
-                <label><input type="text" name = "client_name"></label>
-            </div>
-            <div class = 'enter-email'>
-                <p class = "input-desc">Enter your email:</p>
-                <label><input type="text" name = "client_email" ></label>
-            </div>
-            <div class = 'enter-feedback'>
-            <p class = "input-desc">Enter your feedback:</p>
-            <label><textarea name="client_review" id=""></textarea></label>
-            </div>
-        </div>
+    <img src="static/home/img/bg_blur.png" alt="background" class = "background-image">
+
+
+    <h1 class = "name-of-site">Maglev Tourist Agency</h1>
+
+    <div class = "benefit">
+        <img src="static/home/img/1-benefit.png" alt="1-benefit">
+        <p>Find the best tours through Ukraine and its greatest cities</p>
+
+    </div>
+    <div class = "benefit">
+        <img src="static/home/img/2-benefit.png" alt="2-benefit">
+        <p>Use the most comfort and innovative ideas of transportation</p>
+
+    </div>
+    <div class = "benefit">
+        <img src="static/home/img/3-benefit.png" alt="3-benefit">
+        <p>Spend lesser money than with other tour agencies</p>
+    </div>
+
+
+    <div class = 'all-form'>
+        <form method="post" class = 'feedback-form'>
             
-                <button type = "submit" class = 'send-button'>Send Feedback</button>
-        {% if correct %}
-        <p class = "success-text">The feedback has been sent. </p>
-        {% endif %}  
-        
-    </form>
-</div>
+            <p class = 'leave-feedback-text'>Leave Feedback</p>
+           
+            <div class = 'feedback-form1'>
+                <div class = 'enter-name'>
+                    <p>Enter your name:</p>
+                    <input type="text" name = "client_name">
+                </div>
+                <div class = 'enter-email'>
+                    <p>Enter your email:</p>
+                    <input type="text" name = "client_email" >
+                </div>
+                <div class = 'enter-feedback'>
+                <p>Enter your feedback:</p>
+                <textarea name="client_review" id=""></textarea>
+                </div>
+            </div>
+                
+            <button type = "submit" class = 'send-button'>Send Feedback</button>
+            {% if correct %}
+                <p class = "success-text">The feedback has been sent. </p>
+            {% endif %}  
+            
+        </form>
+    </div>
 {% endblock %}
