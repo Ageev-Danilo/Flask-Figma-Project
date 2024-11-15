@@ -30,12 +30,12 @@
     border: #25233E solid 5px;
     border-radius: 0px 0px 0px 40px;
     border-width: 0px 0px 5px 5px;
-    width: 375px;
-    height: 412px ;
+    width: fit-content;
+    height: fit-content;
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-   
+    padding: 10px;
 
 }
 
@@ -66,7 +66,7 @@ textarea{
     min-width: 290px;
     min-height: 70px;
     max-width: 290px;
-    max-height: 70px;
+    /* max-height: 70px; */
 }
 
 .leave-feedback-text{
@@ -92,12 +92,19 @@ textarea{
     height: 59px;
     color: white;
     font-size: 24px;
-    margin-bottom: 10px ;
+
+    transition: 0.2s;
+    margin-top: 10px ;
     
 }
+.send-button:hover{
+    transition: 0.3s;
+    background: #8d7ebd;
+}
+
 .feedback-form1{
    
-    width: 80%;
+    width: fit-content;
     margin: auto;
     padding-bottom: calc(0px * var(--size));
     color: white;
@@ -105,20 +112,12 @@ textarea{
     font-weight: 400;
     font-family: Inter;
 }
-.enter-name{
+
+.input-field{
     padding-top: 10px;
     padding-bottom: calc(0px * var(--size));
     font-size: 20px;
-}
-.enter-email{
-    padding-top: 10px;
-    padding-bottom: calc(0px * var(--size));
-    font-size: 20px;
-}
-.enter-feedback{
-    padding-top: 10px;
-    padding-bottom: calc(0px * var(--size));
-    font-size: 20px;
+    width: fit-content;
 }
 
 .all-form{
@@ -130,14 +129,26 @@ textarea{
     font-weight: 700;
 }
 
+.all-benefits{
+    display: flex;
+    flex-direction: row;
+}
+
 .benefit{
     font-weight: 400;
     font-size: 40px;
     max-width: 398px;
-    
+    padding: 40px;
 }
+
+.benefit-img{
+    width: 340px;
+    height: 400px;
+    border-radius: 20px;
+}
+
 p{
-    margin: 2px;
+    margin: 3px;
 }
 
 .success-text{
@@ -146,5 +157,5 @@ p{
     font-weight: 300;
     word-break: normal;
     max-width: 600px;
-    margin: 0px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
 }
